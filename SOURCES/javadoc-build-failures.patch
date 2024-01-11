@@ -1,0 +1,72 @@
+diff -Naurp uom-lib-1.0.1.orig/common/src/main/java/tec/uom/lib/common/function/IntIdentifiable.java uom-lib-1.0.1/common/src/main/java/tec/uom/lib/common/function/IntIdentifiable.java
+--- uom-lib-1.0.1.orig/common/src/main/java/tec/uom/lib/common/function/IntIdentifiable.java	2016-10-13 10:08:38.000000000 +1100
++++ uom-lib-1.0.1/common/src/main/java/tec/uom/lib/common/function/IntIdentifiable.java	2017-04-07 12:24:08.335917358 +1000
+@@ -40,11 +40,10 @@ package tec.uom.lib.common.function;
+  * 
+  * @author Werner KEIL
+  * @version 1.0.5 $Date: 2016/01/04 $
+- * @see {@link Identifiable}
+  */
+ public interface IntIdentifiable {
+     /**
+      * @return an Id
+      */
+     public int getId();
+-}
+\ No newline at end of file
++}
+diff -Naurp uom-lib-1.0.1.orig/common/src/main/java/tec/uom/lib/common/function/LongIdentifiable.java uom-lib-1.0.1/common/src/main/java/tec/uom/lib/common/function/LongIdentifiable.java
+--- uom-lib-1.0.1.orig/common/src/main/java/tec/uom/lib/common/function/LongIdentifiable.java	2016-10-13 10:08:38.000000000 +1100
++++ uom-lib-1.0.1/common/src/main/java/tec/uom/lib/common/function/LongIdentifiable.java	2017-04-07 12:24:30.761607643 +1000
+@@ -40,11 +40,10 @@ package tec.uom.lib.common.function;
+  * 
+  * @author Werner KEIL
+  * @version 1.0.1 $Date: 2014/09/17 $
+- * @see {@link Identifiable}
+  */
+ public interface LongIdentifiable {
+     /**
+      * @return an Id
+      */
+     public long getId();
+-}
+\ No newline at end of file
++}
+diff -Naurp uom-lib-1.0.1.orig/common/src/main/java/tec/uom/lib/common/function/Parser.java uom-lib-1.0.1/common/src/main/java/tec/uom/lib/common/function/Parser.java
+--- uom-lib-1.0.1.orig/common/src/main/java/tec/uom/lib/common/function/Parser.java	2016-10-13 10:08:38.000000000 +1100
++++ uom-lib-1.0.1/common/src/main/java/tec/uom/lib/common/function/Parser.java	2017-04-07 12:25:38.582670982 +1000
+@@ -34,11 +34,6 @@ import javax.measure.format.ParserExcept
+ /**
+  * Represents a function that parses an input value and produces an output.
+  * 
+- * <p>
+- * This is a <a href=
+- * "http://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html#package.description"
+- * >functional interface</a> whose functional method is {@link #parse()}.
+- * 
+  * @author <a href="mailto:units@catmedia.us">Werner Keil</a>
+  * @version 1.0, 2016-10-13
+  * @param <I>
+diff -Naurp uom-lib-1.0.1.orig/common/src/main/java/tec/uom/lib/common/function/QuantityOperator.java uom-lib-1.0.1/common/src/main/java/tec/uom/lib/common/function/QuantityOperator.java
+--- uom-lib-1.0.1.orig/common/src/main/java/tec/uom/lib/common/function/QuantityOperator.java	2016-10-13 10:08:38.000000000 +1100
++++ uom-lib-1.0.1/common/src/main/java/tec/uom/lib/common/function/QuantityOperator.java	2017-04-07 12:26:07.941265393 +1000
+@@ -45,7 +45,7 @@ import javax.measure.Quantity;
+  * result = thisOperator.apply(quantity);
+  * </pre>
+  *  
+- * <h4>Implementation specification</h4>
++ * <h1>Implementation specification</h1>
+  * The implementation must take the input object and apply it. The
+  * implementation defines the logic of the operator and is responsible for
+  * documenting that logic. It may use any method on {@code Quantity} to
+diff -Naurp uom-lib-1.0.1.orig/common/src/main/java/tec/uom/lib/common/function/QuantitySupplier.java uom-lib-1.0.1/common/src/main/java/tec/uom/lib/common/function/QuantitySupplier.java
+--- uom-lib-1.0.1.orig/common/src/main/java/tec/uom/lib/common/function/QuantitySupplier.java	2016-10-13 10:08:38.000000000 +1100
++++ uom-lib-1.0.1/common/src/main/java/tec/uom/lib/common/function/QuantitySupplier.java	2017-04-07 12:27:59.212727858 +1000
+@@ -43,7 +43,6 @@ import javax.measure.Quantity;
+  * @author Werner Keil
+  * @version 0.1, $Date: 2014-11-05 $
+  * @param <Q> the type of quantities supplied by this supplier
+- * @see {@link Quantity}
+  */
+ //@FunctionalInterface
+ public interface QuantitySupplier<Q extends Quantity<Q>> {
